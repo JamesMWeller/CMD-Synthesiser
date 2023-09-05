@@ -5,7 +5,7 @@ using namespace std;
 
 atomic<double> dFrequencyOutput = 0.0;
 
-atomic<double> selector = 0;
+double selector = 0;
 
 // Converts frequency (Hz) to angular velocity
 double w(double dHertz) { return dHertz * 2 * PI;}
@@ -34,9 +34,9 @@ double osc(double dHertz, double dTime, int nType)
 	}
 	case 4: // Saw Wave (Optimised / Harsh / Fast)
 	{
-		return(2.0 / PI) * (dHertz * PI * fmod(dTime, 1.0 / dHertz) - (PI / 2.0));
+		return (2.0 / PI) * (dHertz * PI * fmod(dTime, 1.0 / dHertz) - (PI / 2.0));
 	}
-	case 5: // Pseudo Random Noise
+	case 5: // Pseudo Random Noise - WARNING loud.
 		return 2.0 * ((double)rand() / (double)RAND_MAX) - 1.0;
 	default:
 		return 0.0;
@@ -91,7 +91,7 @@ int main()
 		if (!bKeyPressed)
 		{
 			dFrequencyOutput = 0.0;
-		}
+		} 
 
 		// Oscillator Selector
 		for (int s = 0; s < 9; s++)
