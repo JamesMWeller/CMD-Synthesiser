@@ -24,6 +24,7 @@
     <ProjectGuid>{509fc956-fd62-4a86-ba11-fae51d1abff8}</ProjectGuid>
     <RootNamespace>IroncladSynthesizer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>IroncladSynthesizer</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
