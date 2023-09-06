@@ -70,9 +70,6 @@ int main()
 	//Link noise function with sound machine
 	sound.SetUserFunction(MakeNoise);
 
-	double dOctaveBaseFrequency = 110.0; //A2
-	double d12thRootOf2 = pow(2.0, 1.0 / 12.0);
-
 	while (1)
 	{
 		// Keyboard Control
