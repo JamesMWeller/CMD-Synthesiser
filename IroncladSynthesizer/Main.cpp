@@ -133,15 +133,11 @@ sEnvelopeADSR envelope;
 
 double MakeNoise(double dTime)
 {
-	//double dOutput = envelope.GetAmplitude(dTime) * osc(dFrequencyOutput, dTime, selector);
+	double dOutput = envelope.GetAmplitude(dTime) * osc(dFrequencyOutput, dTime, selector);
 
-	double dOutput = envelope.GetAmplitude(dTime) *
-		(
-			+ osc(dFrequencyOutput * 0.5, dTime, 3)
-			+ osc(dFrequencyOutput * 1.0, dTime,1)
-		);
+	//double dOutput = envelope.GetAmplitude(dTime) * (+ osc(dFrequencyOutput * 0.5, dTime, 3) + osc(dFrequencyOutput * 1.0, dTime,1));
 
-	return dOutput * 0.5; // Volume
+	return dOutput * 0.1; // Volume
 
 }
 
